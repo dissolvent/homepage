@@ -1,4 +1,5 @@
-# Homepage
+# Homepage [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/dissolvent/homepage/blob/develop/LICENSE)
+
 
 ## Hi!
 
