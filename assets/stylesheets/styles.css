@@ -6,6 +6,19 @@
   border-radius: 30%;
 }
 
+.highlight-background {
+  animation: highlightBackground 0.5s ease-in;
+}
+
+@keyframes highlightBackground {
+  0% {
+    background-color: #cecea4;
+  }
+  100% {
+    background-color: inherit;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .avatar {
     max-width: 11rem;
