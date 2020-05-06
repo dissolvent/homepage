@@ -1,0 +1,8 @@
+package.json
+package-lock.json
+node_modules/
+
+sw.js.map
+workbox-3f24bdea.js
+workbox-3f24bdea.js.map
+.now
