@@ -152,7 +152,8 @@
                     <li>планировал, анализировал, размещал рекламные кампании</li>
                     <li>project management нестандартных проектов</li>
                     <li>готовил отчеты</li>
-                    <li>много вещей, которые делаю и <a href="#timeline-now">сейчас</a></li>
+                    <li>много вещей, которые делаю и <a id='go-to-timeline-now' href="#timeline-now"
+                        data-ref="timeline-now">сейчас</a></li>
                   </ul>
                 </li>
                 <li>
@@ -226,7 +227,7 @@
                   HTML CSS JS WEBPACK NODEJS NPM SASS GIT <span class="nowrap">MICROSOFT
                     OFFICE</span> PYTHON SLOWBRO POSTGRESQL <span class="nowrap">GOOGLE ADS</span> <span
                     class="nowrap">FACEBOOK ADS</span> GDE GA CMeter <span class="nowrap">API Graph</span> <span
-                    class="nowrap">GOOGLE SEARCH</span> <a href="https://youtu.be/ZNAkoc1tjoQ?t=28" rel="external"
+                    class="nowrap">GOOGLE SEARCH</span> <a href="https://youtu.be/ZNAkoc1tjoQ?t=28" rel="noopener"
                     target="_blank">CHUG-CHUG-CHUG</a> <sub>нашли покемона?</sub></p>
               </section>
               <section>
@@ -246,7 +247,7 @@
                 <h3>Не нравится &#x1f61e;</h3>
                 <p class="tags small uppercase">
                   <span class="nowrap">Чернослив</span> Прокрастинировать <span class="nowrap">Моя аллергия</span>
-                  <span class="npwrap">Пьяные разговоры</span> Суеверия
+                  <span class="nowrap">Пьяные разговоры</span> Суеверия
                 </p>
               </section>
               <section>
@@ -301,6 +302,16 @@
       </div>
     </article>
   </main>
+  <script>
+    const linkToTimelineNow = document.getElementById('go-to-timeline-now');
+    linkToTimelineNow.addEventListener('click', highlightBackground)
+
+    function highlightBackground(event) {
+      const element = document.getElementById(event.target.dataset['ref']);
+      element.classList.add('highlight-background');
+      setTimeout(() => element.classList.remove('highlight-background'), 500);
+    }
+  </script>
 </body>
 
 </html>
