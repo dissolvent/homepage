@@ -152,7 +152,8 @@
                     <li>планировал, анализировал, размещал рекламные кампании</li>
                     <li>project management нестандартных проектов</li>
                     <li>готовил отчеты</li>
-                    <li>много вещей, которые делаю и <a href="#timeline-now">сейчас</a></li>
+                    <li>много вещей, которые делаю и <a id='go-to-timeline-now' href="#timeline-now"
+                        data-ref="timeline-now">сейчас</a></li>
                   </ul>
                 </li>
                 <li>
@@ -301,6 +302,16 @@
       </div>
     </article>
   </main>
+  <script>
+    const linkToTimelineNow = document.getElementById('go-to-timeline-now');
+    linkToTimelineNow.addEventListener('click', highlightBackground)
+
+    function highlightBackground(event) {
+      const element = document.getElementById(event.target.dataset['ref']);
+      element.classList.add('highlight-background');
+      setTimeout(() => element.classList.remove('highlight-background'), 500);
+    }
+  </script>
 </body>
 
 </html>

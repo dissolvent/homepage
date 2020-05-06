@@ -149,7 +149,8 @@
                     <li>plan, analyze and run advertising campaigns</li>
                     <li>project management of non-standard campaigns</li>
                     <li>reporting</li>
-                    <li>other stuff, pretty similar to my <a id="go-to-timeline-now" href="#timeline-now">current</a>
+                    <li>other stuff, pretty similar to my <a id='go-to-timeline-now' href="#timeline-now"
+                        data-ref="timeline-now">current</a>
                       workflow</li>
                   </ul>
                 </li>
@@ -295,12 +296,11 @@
     </article>
   </main>
   <script>
-    document.getElementById('go-to-timeline-now').addEventListener('click', highlightBackground);
+    const linkToTimelineNow = document.getElementById('go-to-timeline-now');
+    linkToTimelineNow.addEventListener('click', highlightBackground)
 
     function highlightBackground(event) {
-      // get rid of # in hash
-      const elementId = location.hash.slice(1, location.hash.length);
-      const element = document.getElementById(hashElementId);
+      const element = document.getElementById(event.target.dataset['ref']);
       element.classList.add('highlight-background');
       setTimeout(() => element.classList.remove('highlight-background'), 500);
     }
